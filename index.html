@@ -3,44 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>巴拉望-巴頓秘境與海共舞五日 | 旅遊行程</title>
+    <title>巴拉望秘境五日遊 | 自動輪播行程版</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Noto Sans TC', sans-serif; color: #333; line-height: 1.6; }
+        body { font-family: 'Noto Sans TC', sans-serif; color: #333; background-color: #f8f9fa; }
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center; height: 60vh;
+            display: flex; align-items: center; justify-content: center; color: white; text-align: center;
         }
-        .section-title { position: relative; margin-bottom: 3rem; padding-bottom: 1rem; }
+        .section-title { position: relative; margin-bottom: 3rem; padding-bottom: 1rem; text-align: center; }
         .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: #007bff;
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 80px; height: 4px; background-color: #00d2ff;
         }
-        .day-card { border-left: 5px solid #007bff; margin-bottom: 2rem; transition: 0.3s; }
-        .day-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .badge-promo { background-color: #ff4757; color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: bold; }
-        .hotel-img { height: 250px; object-fit: cover; border-radius: 10px; }
-        footer { background-color: #2f3542; color: white; padding: 3rem 0; }
-        .alert-custom { background-color: #e3f2fd; border-left: 5px solid #2196f3; }
-        .whale-shark-notes { background-color: #fff5f5; border: 1px solid #feb2b2; padding: 1.5rem; border-radius: 10px; }
+        /* 行程卡片與輪播設定 */
+        .day-card { background: white; border-radius: 15px; overflow: hidden; margin-bottom: 40px; border: none; }
+        .day-number { background: #00d2ff; color: white; padding: 10px 20px; font-weight: bold; display: inline-block; border-radius: 0 0 15px 0; }
+        .carousel-item img { height: 350px; object-fit: cover; } /* 統一照片高度 */
+        .info-label { font-weight: bold; color: #00d2ff; margin-top: 10px; display: block; }
+        .badge-promo { background-color: #ff4757; color: white; padding: 0.5rem 1rem; border-radius: 50px; }
+        .whale-notes { background: #fff5f5; border-left: 4px solid #ff4757; padding: 10px; font-size: 0.9rem; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -48,15 +35,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fas fa-umbrella-beach me-2"></i>巴拉望秘境</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="#"><i class="fas fa-ship me-2"></i>巴拉望巴頓秘境</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#highlights">行程特色</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#itinerary">五日行程</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#hotels">優質住宿</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#itinerary">行程內容</a></li>
                 </ul>
             </div>
         </div>
@@ -64,186 +46,146 @@
 
     <!-- Hero -->
     <header class="hero-section">
-        <div class="container">
-            <h4 class="text-uppercase tracking-widest mb-3">Port Barton 巴頓尋幽秘境</h4>
-            <h1 class="display-3 fw-bold mb-4">巴拉望-與海共舞五日</h1>
-            <p class="lead mb-4">贈送每人一隻龍蝦 (200-300公克) | 地底河流驚奇之旅</p>
-            <span class="badge-promo text-white shadow">保證全程無購物站</span>
+        <div>
+            <h1 class="display-3 fw-bold">巴拉望·與海共舞五日</h1>
+            <p class="lead">尋幽秘境 - 地底河流驚奇之旅</p>
+            <span class="badge-promo">贈送每人一隻 200-300g 龍蝦</span>
         </div>
     </header>
 
-    <!-- Highlights -->
-    <section id="highlights" class="py-5">
-        <div class="container">
-            <h2 class="text-center section-title">為什麼選擇巴拉望？</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 text-center">
-                        <div class="card-body">
-                            <i class="fas fa-star fa-3x text-warning mb-3"></i>
-                            <h5>全亞洲最美沙灘</h5>
-                            <p class="text-muted">2014 年美國《Conde Nast Travel》雜誌票選肯定。</p>
-                        </div>
-                    </div>
+    <div class="container my-5" id="itinerary">
+        <h2 class="section-title">五天四夜詳細行程</h2>
+
+        <!-- Day 1 -->
+        <div class="card day-card shadow-sm">
+            <div class="row g-0">
+                <div class="col-lg-7 p-4">
+                    <span class="day-number">DAY 01</span>
+                    <h3 class="mt-3">台北 ✈ 馬尼拉 ✈ 公主港</h3>
+                    <p>抵達公主港後展開驚奇之旅。晚餐安排<strong>韓式生猛海鮮鍋</strong>，含龍蝦、海戰車、螃蟹等豐富食材。餐後前往全公主港最棒的 <strong>Tiki Bar</strong> 享受 Live Band 搖滾演奏與啤酒。</p>
+                    <span class="info-label"><i class="fas fa-utensils me-2"></i>餐食設定</span>
+                    <p class="small text-muted">早餐：XXX / 午餐：XXX / 晚餐：韓式生猛海鮮鍋</p>
+                    <span class="info-label"><i class="fas fa-bed me-2"></i>住宿安排</span>
+                    <p class="small text-muted">PRINCESA GARDEN ISLAND RESORT AND SPA</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 text-center">
-                        <div class="card-body">
-                            <i class="fas fa-globe-asia fa-3x text-info mb-3"></i>
-                            <h5>全球 20 最佳旅遊景點</h5>
-                            <p class="text-muted">《國家地理雜誌》評選為全球必去景點之一。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 text-center">
-                        <div class="card-body">
-                            <i class="fas fa-leaf fa-3x text-success mb-3"></i>
-                            <h5>最後的天堂處女地</h5>
-                            <p class="text-muted">菲律賓人口密度最低、自然風貌保護最原始的省份。</p>
+                <div class="col-lg-5">
+                    <div id="carouselDay1" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="1"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="2"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1559480676-1217ca823d82?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="3"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1586500036706-41963de24d8b?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="4"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="5"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Itinerary -->
-    <section id="itinerary" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center section-title">五天四夜精彩行程</h2>
-            
-            <!-- Day 1 -->
-            <div class="card day-card border-0 shadow-sm p-4 mb-4">
-                <h4 class="text-primary">Day 1 啟程：台北 ✈ 馬尼拉 ✈ 公主港</h4>
-                <p>今日搭乘菲律賓航空經馬尼拉飛往巴拉望。晚上安排前往 <strong>Tiki Bar</strong> 欣賞 Live Band 演出，贈送一瓶啤酒或飲料，開啟度假模式！</p>
-                <div class="row">
-                    <div class="col-md-6"><small><strong><i class="fas fa-utensils me-2"></i>晚餐：</strong> 韓式生猛海鮮鍋 (含龍蝦、海戰車、螃蟹)</small></div>
-                    <div class="col-md-6"><small><strong><i class="fas fa-bed me-2"></i>住宿：</strong> PRINCESA GARDEN ISLAND RESORT AND SPA</small></div>
-                </div>
-            </div>
-
-            <!-- Day 2 -->
-            <div class="card day-card border-0 shadow-sm p-4 mb-4">
-                <h4 class="text-primary">Day 2 與鯨鯊共舞 🐋 Astoria Palawan</h4>
-                <p>清晨前往 Baywalk 搭乘螃蟹船尋找海洋巨人——<strong>鯨鯊</strong>。下午入住具備私人海灘的 Astoria Palawan 渡假酒店。</p>
-                <div class="whale-shark-notes mb-3">
-                    <small><strong>⚠️ 鯨鯊注意事項：</strong> 禁止塗抹防曬油、禁止觸摸鯨鯊、遠離其尾部四公尺、禁止使用閃光燈。違反者整船拉回！</small>
-                </div>
-                <div class="row">
-                    <div class="col-md-6"><small><strong><i class="fas fa-utensils me-2"></i>餐食：</strong> 早/飯店、午/海島野宴、晚/飯店內</small></div>
-                    <div class="col-md-6"><small><strong><i class="fas fa-bed me-2"></i>住宿：</strong> Astoria Palawan Resort 雅士度假村</small></div>
-                </div>
-            </div>
-
-            <!-- Day 3 -->
-            <div class="card day-card border-0 shadow-sm p-4 mb-4">
-                <h4 class="text-primary">Day 3 Port Barton 巴頓港海洋公園跳島</h4>
-                <p>探索「小愛妮島」之稱的巴頓港：<strong>珊瑚保護區</strong>（看熱帶魚與尼莫）、<strong>Paradise Island</strong>、<strong>Lowly 島</strong>（下沉式漂浮島）。</p>
-                <div class="row">
-                    <div class="col-md-6"><small><strong><i class="fas fa-utensils me-2"></i>餐食：</strong> 早/飯店、午/海島野宴、晚/飯店內</small></div>
-                    <div class="col-md-6"><small><strong><i class="fas fa-bed me-2"></i>住宿：</strong> Astoria Palawan Resort 雅士度假村</small></div>
-                </div>
-            </div>
-
-            <!-- Day 4 -->
-            <div class="card day-card border-0 shadow-sm p-4 mb-4">
-                <h4 class="text-primary">Day 4 世界遺產：地底河流之旅 & 螢火蟲</h4>
-                <p>參觀世界自然遺產<strong>地底河流</strong>（全長6公里）。隨後前往 Ugong Rock 挑戰 <strong>Zip Line 空中飛人滑索</strong>。夜晚在 Nagsagipi River 尋找浪漫螢火蟲。</p>
-                <div class="row">
-                    <div class="col-md-6"><small><strong><i class="fas fa-utensils me-2"></i>餐食：</strong> 早/飯店、午/菲式自助餐、晚/Kalui 藝術家餐廳</small></div>
-                    <div class="col-md-6"><small><strong><i class="fas fa-bed me-2"></i>住宿：</strong> PRINCESA GARDEN ISLAND RESORT AND SPA</small></div>
-                </div>
-            </div>
-
-            <!-- Day 5 -->
-            <div class="card day-card border-0 shadow-sm p-4 mb-4">
-                <h4 class="text-primary">Day 5 珍重再見：巴拉望 ✈ 台北</h4>
-                <p>享受豐富的早餐後，專車前往公主港機場，經馬尼拉返回台北，結束這段難忘的驚奇之旅。</p>
-                <div class="row">
-                    <div class="col-md-6"><small><strong><i class="fas fa-utensils me-2"></i>餐食：</strong> 早/飯店、午/自理</small></div>
-                    <div class="col-md-6"><small><strong><i class="fas fa-home me-2"></i>住宿：</strong> 溫暖的家</small></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hotels -->
-    <section id="hotels" class="py-5">
-        <div class="container">
-            <h2 class="text-center section-title">優質度假飯店</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card h-100 border-0">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="hotel-img card-img-top" alt="Hotel 1">
-                        <div class="card-body">
-                            <h5 class="fw-bold">公主花園海島 SPA 度假村</h5>
-                            <p class="small text-muted">Princesa Garden Island Resort</p>
-                            <p>位於市中心附近，擁有 78 間舒適客房及齊全娛樂設施（迷你高爾夫、熱水浴缸、專用海灘）。</p>
-                        </div>
+        <!-- Day 2 -->
+        <div class="card day-card shadow-sm">
+            <div class="row g-0 flex-lg-row-reverse"> <!-- 圖片文字交錯 -->
+                <div class="col-lg-7 p-4">
+                    <span class="day-number">DAY 02</span>
+                    <h3 class="mt-3">與鯨鯊共舞 🐋 Astoria Palawan</h3>
+                    <p>清晨前往野生鯨鯊棲息區，體驗與海洋中最大魚類——鯨鯊面對面的震撼。下午入住擁有私人海灘與水上樂園的 <strong>Astoria Palawan 雅士度假村</strong>。</p>
+                    <div class="whale-notes">
+                        <strong>⚠️ 鯨鯊注意事項：</strong>禁止塗抹防曬、禁止觸摸、保持4公尺距離，違反者整船拉回。
                     </div>
+                    <span class="info-label"><i class="fas fa-utensils me-2"></i>餐食設定</span>
+                    <p class="small text-muted">早餐：飯店內 / 午餐：海島野宴 / 晚餐：飯店內</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100 border-0">
-                        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="hotel-img card-img-top" alt="Hotel 2">
-                        <div class="card-body">
-                            <h5 class="fw-bold">雅士巴拉望度假村</h5>
-                            <p class="small text-muted">Astoria Palawan Resort</p>
-                            <p>座落於蘇祿海海灘沿岸，佔地 5 公頃。設有戶外泳池、兒童遊樂場及水上樂園。</p>
+                <div class="col-lg-5">
+                    <div id="carouselDay2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="https://images.unsplash.com/photo-1560067174-c5a3a8f37060?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="1"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1506929197327-0e3962d7a552?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="2"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1544124499-58912cbddaad?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="3"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="4"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="5"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Info Table -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 mx-auto">
-                    <div class="table-responsive shadow-sm bg-white p-4 rounded">
-                        <h5 class="mb-3 fw-bold">航班參考資訊</h5>
-                        <table class="table table-bordered align-middle text-center">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th>行程</th>
-                                    <th>航空公司</th>
-                                    <th>航班</th>
-                                    <th>出發/抵達</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>去程 (7/3)</td>
-                                    <td>菲律賓航空</td>
-                                    <td>PR-891</td>
-                                    <td>09:45 / 12:20</td>
-                                </tr>
-                                <tr>
-                                    <td>回程 (7/7)</td>
-                                    <td>菲律賓航空</td>
-                                    <td>PR-894</td>
-                                    <td>12:35 / 15:05</td>
-                                </tr>
-                            </tbody>
-                        </table>
+        <!-- Day 3 -->
+        <div class="card day-card shadow-sm">
+            <div class="row g-0">
+                <div class="col-lg-7 p-4">
+                    <span class="day-number">DAY 03</span>
+                    <h3 class="mt-3">巴頓港跳島：尋找尼莫與海龜</h3>
+                    <p>前往「小愛妮島」巴頓港。在<strong>珊瑚保護區</strong>浮潛看熱帶魚，拜訪<strong>Paradise Island</strong>放空，並造訪只有退潮才出現的 <strong>Lowly 島</strong>。幸運的話還能遇到悠游的海龜！</p>
+                    <span class="info-label"><i class="fas fa-utensils me-2"></i>餐食設定</span>
+                    <p class="small text-muted">早餐：飯店內 / 午餐：海島野宴 / 晚餐：飯店內</p>
+                </div>
+                <div class="col-lg-5">
+                    <div id="carouselDay3" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="1"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="2"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="3"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="4"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="5"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p class="mb-2"><i class="fas fa-heart text-danger me-2"></i>巴拉望 - 最後的天堂處女地</p>
-            <p class="small text-secondary">本網頁行程內容僅供參考，實際順序以當地導遊安排為準。</p>
-            <div class="mt-4">
-                <a href="#" class="text-white me-3 text-decoration-none small">服務條款</a>
-                <a href="#" class="text-white text-decoration-none small">隱私政策</a>
+        <!-- Day 4 -->
+        <div class="card day-card shadow-sm">
+            <div class="row g-0 flex-lg-row-reverse">
+                <div class="col-lg-7 p-4">
+                    <span class="day-number">DAY 04</span>
+                    <h3 class="mt-3">世界遺產地底河流 & Zip Line</h3>
+                    <p>搭乘遊船深入 6 公里長的<strong>地底河流</strong>。下午前往 Ugong Rock 挑戰 380 公尺高的 <strong>Zip Line 滑索</strong>。夜晚安排<strong>螢火蟲之旅</strong>，沉浸在紅樹林閃爍的浪漫氛圍中。</p>
+                    <span class="info-label"><i class="fas fa-utensils me-2"></i>餐食設定</span>
+                    <p class="small text-muted">早餐：飯店內 / 午餐：菲式自助餐 / 晚餐：Kalui 藝術家餐廳</p>
+                </div>
+                <div class="col-lg-5">
+                    <div id="carouselDay4" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="https://images.unsplash.com/photo-1502085671122-2d218cd434e6?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="1"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="2"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1505881502353-a1986add3732?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="3"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="4"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="5"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Day 5 -->
+        <div class="card day-card shadow-sm">
+            <div class="row g-0">
+                <div class="col-lg-7 p-4">
+                    <span class="day-number">DAY 05</span>
+                    <h3 class="mt-3">巴拉望 ✈ 台北</h3>
+                    <p>最後一個悠閒的早晨，在飯店享用早餐後前往機場，經馬尼拉返回台灣。導遊車上也會販售香蕉乾、椰子油等當地名產，方便購買伴手禮。</p>
+                    <span class="info-label"><i class="fas fa-home me-2"></i>返回溫暖的家</span>
+                    <p class="small text-muted">早餐：飯店內 / 午餐：自理</p>
+                </div>
+                <div class="col-lg-5">
+                    <div id="carouselDay5" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109c0f2?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="1"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="2"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1464014271128-208569720c2d?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="3"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1540206395-6880f94903af?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="4"></div>
+                            <div class="carousel-item"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <p>巴拉望五日遊 行程介紹版</p>
+        <small class="text-secondary">※行程順序視當地氣候、交通調整。全線無購物站安排。</small>
     </footer>
 
     <!-- Bootstrap Bundle with Popper -->
